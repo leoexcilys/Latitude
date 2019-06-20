@@ -21,25 +21,15 @@ public abstract class Application {
 	}
 	
 	public static void main(String[] args) {
-//		String bouclier = "bouclier";			
-//		String epee ="épée";
-//		String arc ="arc";
-//		
-//		System.out.println(bouclier);
-//		System.out.println(epee);
-//		System.out.println(arc);
-//
-//		int nbExcilys =167;
-//		String nb = "Nombre d'Exciliens : ";
-//		System.out.println(nb + nbExcilys);
-		
 		Soldat leo = new Soldat( new Arme("épée") ,"Leo");
-		
 		Soldat jerem = new Soldat(new Arme("archer"), "jerem");
-		
 		Soldat mehdi = new Soldat(new Arme("bouclier"), "mehdi");
 		
 		//tableau sold
+		System.out.println(leo.nom+" a "+leo.PV+" PV");
+		System.out.println(jerem.nom+" a "+jerem.PV+" PV");
+		System.out.println(mehdi.nom+" a "+mehdi.PV+" PV");
+		System.out.println();
 		
 		// pourchaque soldat dans tab
 		// combattre less autres
@@ -49,7 +39,6 @@ public abstract class Application {
 		for(int i=0;i<soldats.length;i=i+1) {
 			for(int j=0;j<soldats.length;j=j+1) {
 				if (j!=i) {
-					
 					System.out.println(soldats[i].nom +" vs " +soldats[j].nom +":");
 					Soldat winner = versus(soldats[i], soldats[j]);
 					if (winner== null) {
@@ -61,22 +50,5 @@ public abstract class Application {
 				}
 			}
 		}
-		
-		
-		
-		
 	}    
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
