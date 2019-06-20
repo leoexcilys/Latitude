@@ -2,11 +2,11 @@ package app;
 
 public class Soldat {
 	// ATTRIBUT (Caractéristiques)
-	String arme;
+	Arme arme;
 	String nom;
 	
 	// CONSTRUCTEUR
-	Soldat(String a, String b) {
+	Soldat(Arme a, String b) {
 		arme = a;
 		nom= b;
 	}
